@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "Sociocaster",
 	"description": "This extension helps Sociocaster's users to share,schedule, and save content from the internet",
-	"version": "1.6",
+	"version": "1.7",
 	"browser_action": {
 		"default_icon": {
 			"19": "logo_icon_19.png",
@@ -12,16 +12,17 @@
 	},
 	"background": {
 		"scripts": ["jquery-2.1.1.min.js",
-		"background.js"],
+			"background.js"
+		],
 		"persistent": false
 	},
 	"content_scripts": [{
 		"js": ["jquery-2.1.1.min.js",
 			"inject.js",
-		"hover-button.js"],
+			"hover-button.js"
+		],
 		"matches": ["*://*/*"]
-	},
-	{
+	}, {
 		"css": ["sc-facebook.css"],
 		"js": ["sc-facebook.js"],
 		"matches": ["*://*.facebook.com/*"]
@@ -30,9 +31,11 @@
 		"tabs",
 		"activeTab",
 		"https://*.sociocaster.com/*",
-	"storage"],
+		"storage"
+	],
 	"web_accessible_resources": [
-	"hover-icon@2x.png","hover-icon@1x.png"],
+		"hover-icon@2x.png", "hover-icon@1x.png"
+	],
 	"homepage_url": "https://sociocaster.com",
 	"icons": {
 		"128": "logo_icon_128.png",
@@ -41,9 +44,9 @@
 	},
 	"applications": {
 		"gecko": {
-			"id": "newsociocaster@sociocaster.com",
-			"strict_min_version": "45.0"
+			"id": "sociocaster@sociocaster.com",
+			"strict_min_version": "48.0"
 		}
-		
+
 	}
 }
